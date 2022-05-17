@@ -5,7 +5,9 @@ class Demoimage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       "assets/instagram.png",
-      height: MediaQuery.of(context).size.width / 2,
+      height: MediaQuery.of(context).size.width,
+      color: Colors.black.withOpacity(0.6),
+      colorBlendMode: BlendMode.darken,
     );
   }
 }
