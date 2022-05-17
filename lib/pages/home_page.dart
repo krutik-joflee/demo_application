@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:demo_application/drawer.dart';
+import 'package:demo_application/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
 
@@ -38,6 +39,14 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
           title: const Text("Awesome App"),
+          actions: [
+            IconButton(
+                icon: Icon(Icons.exit_to_app),
+                onPressed: () {
+                  Constants.prefs.setBool("LoggedIn", false);
+                  Navigator.pushReplacementNamed(context, "/login");
+                }),
+          ],
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),

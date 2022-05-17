@@ -1,15 +1,22 @@
-import 'package:demo_application/drawer.dart';
-import 'package:demo_application/pages/home_page.dart';
+import 'package:demo_application/pages/home_page.dart' show Homepage;
 import 'package:demo_application/pages/login_page.dart';
+import 'package:demo_application/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'columnwidget.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Constants.prefs = await SharedPreferences.getInstance();
+
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "demo app",
-      home: loginpage(),
+      home: Constants.prefs.getBool("LoggedIn") == true
+          ? Homepage()
+          : loginpage(),
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
