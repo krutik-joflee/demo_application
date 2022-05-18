@@ -1,4 +1,4 @@
-import 'package:demo_application/demo_image.dart';
+import 'package:demo_application/widget/demo_image.dart';
 import 'package:demo_application/pages/home_page.dart';
 import 'package:demo_application/utils/constants.dart';
 import 'package:flutter/material.dart';

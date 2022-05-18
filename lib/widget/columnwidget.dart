@@ -1,6 +1,5 @@
+import 'package:demo_application/widget/demo_image.dart';
 import 'package:flutter/material.dart';
-
-import 'demo_image.dart';
 
 class ColumnWidget extends StatelessWidget {
   const ColumnWidget({
