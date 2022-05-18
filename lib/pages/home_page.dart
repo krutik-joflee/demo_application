@@ -4,8 +4,6 @@ import 'package:demo_application/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
 
-import '../model/api_model.dart';
-
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
 
